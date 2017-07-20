@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="blogApp">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game of Thrones</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<style>
+footer{
+background:black;
+color:white;
+font-size:0.75em;
+margin-top:8%;
+padding-top:0.6%;
+padding-bottom:0.6%;
+position:relative;
+text-align:center;
+
+}
+</style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#/">The Game of Thrones</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#/">Home</a>
+                    </li>                   
+                </ul>
+            </div>
+            
+        </div>
+        <!-- /.container -->
+    </nav>
+    <header class="intro-header" style="background-image: url('img/bg.jpg')">
+       <div class="site-heading">        
+                
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="col-sm-4 col-xs-12 col-md-3 col-lg-3 col-xl-3">
+   
+
+        </div>
+       <div ng-view  class="col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+           
+           
+       </div> 
+
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+    <h4 >&copy; 2017 Shreyash  Shantam. All Rights Reserved.</h4>  
+    </footer>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.8/angular-filter.min.js"></script>
+    <script type="text/javascript" src="angular/app.js"></script>
+    <script type="text/javascript" src="directive/blogs.js"></script>
+    <script type="text/javascript" src="angular/routes.js"></script>
+</body>
+</html>

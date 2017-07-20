@@ -1,0 +1,87 @@
+<div class="row" ng-init="viewBlog.loadSingeBlog()">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                <h1>{{viewBlog.url1| uppercase}}</h1>
+
+
+                <div ng-if="viewBlog.url1=='books'" class="well" ng-style="viewBlog.obj1">
+                      <header  class="intro-header" style="background-image: url('img/img2.jpg')">
+                                <div class="container">
+                                <div class="row">
+                                <div class="col-lg-10 col-lg-offset-2 col-md- col-md-offset-1">
+                                <div class="site-heading"> </div>
+                                </div>
+                                </div>
+                                </div>
+                       </header>
+
+
+                         <span class="post-m eta">
+                            <span>Name          : {{viewBlog.book.name}}</span><br>
+                            <span>Author        : {{viewBlog.book.authors[0]}}</span><br>
+                            <span>Release Date  : {{viewBlog.book.released| date:'mediumDate'}}</span><br>
+                            <Span>NumberOfPages : {{viewlog.book.numberOfPages}}</Span><br>
+                            <span>Publisher     : {{viewBlog.book.publisher}}</span><br>
+                            <span>Country       : {{viewBlog.book.country}}</span><br>
+                            <span>MediaType     : {{viewBlog.book.mediaType}}</span><br>
+                            <span>Total Number of Characters: {{(viewBlog.book.characters).length}}</span>
+                          </span> 
+
+                </div>
+
+
+                 <div ng-if="viewBlog.url1 =='houses'" class="well" ng-style="viewBlog.obj2">
+                <header class="intro-header" style="background-image: url('img/img5.jpg')">
+                    <div class="container">
+                    <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">  
+                    <div class="site-heading"> </div>
+                    </div>
+                    </div></div>
+                </header>
+                                       <!-- Only the result prsent for particular house will be displayed and rest will be hidden-->
+                   <span class="post-meta">
+                            <Span>Name   : {{viewBlog.house.name}}</Span><br>
+                            <span>Region : {{viewBlog.house.region}}</span><br>
+                            <span ng-show="viewBlog.house.titles[0]">Title  : {{viewBlog.house.titles[0]}}<br></span>
+                            <span ng-show="viewBlog.house.coatOfArms">coatOfArms  :{{viewBlog.house.coatOfArms}}<br></span>
+                            <span ng-show="viewBlog.house.words">Words: {{viewBlog.house.words}}<br></span>
+                            <span ng-show="viewBlog.house.founded">Founded  : {{viewBlog.house.founded}}<br></span>
+                            <span ng-show="viewBlog.curName">Current Lord Character : {{viewBlog.curName}}<br></span>
+                            <span ng-show="viewBlog.overName">Overload House : {{viewBlog.overName}}<br></span>
+                   </span>
+                    
+                 </div>
+
+                 <div ng-if="viewBlog.url1 =='characters'" class="well" ng-style="viewBlog.obj3">
+                 <header  ng-if="viewBlog.url1=='characters'" class="intro-header" style="background-image: url('img/img3.jpg')">
+                 <div class="container">
+                    <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">  
+                    <div class="site-heading"> </div>
+                    </div>
+                    </div></div>
+                 </header>
+                  <!-- Only the result prsent for particular Character will be displayed and rest will be hidden-->
+                   <span class="post-meta">
+                        <SPAN ng-show="viewBlog.character.name">Name:{{viewBlog.character.name}}<br></SPAN>
+                        Aliases:<span>{{viewBlog.character.aliases[0]}}</span><br>
+                        <span ng-show="viewBlog.character.culture"> Culture : {{viewBlog.character.culture}}<br></span>
+                        <span ng-show="viewBlog.character.gender">Gender : {{viewBlog.character.gender}}<br></span>
+                        <span ng-show="viewBlog.BooksCount">No. of Books : {{viewBlog.BooksCount}}<br></span>
+                        <span ng-show="viewBlog.BookName">Book Used : {{viewBlog.BookName}}</span>
+                    </span>    
+                 </div>
+                 
+
+              
+              
+             
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#/">Back to Home &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+</div>
